@@ -1,0 +1,34 @@
+.match-list {
+  padding: 2rem 0;
+}
+
+.match-list-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 1.5rem;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .match-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .match-list-title {
+    font-size: 1.5rem;
+  }
+}

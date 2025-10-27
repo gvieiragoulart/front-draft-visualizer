@@ -1,0 +1,214 @@
+.match-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.match-card:hover {
+  background-color: var(--bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.match-card.live {
+  border-left: 4px solid var(--accent-success);
+}
+
+.match-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.match-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.event-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.match-format {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.live {
+  background-color: rgba(72, 187, 120, 0.2);
+  color: var(--accent-success);
+  animation: pulse 2s infinite;
+}
+
+.status-badge.upcoming {
+  background-color: rgba(237, 137, 54, 0.2);
+  color: var(--accent-warning);
+}
+
+.status-badge.finished {
+  background-color: rgba(113, 128, 150, 0.2);
+  color: var(--text-muted);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.match-body {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.team {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-placeholder {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+}
+
+.team-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.team-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.team-country {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.team-score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  min-width: 40px;
+  text-align: center;
+}
+
+.match-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.vs {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.match-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.match-time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.time {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.date {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.watch-button {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--accent-primary);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.watch-button:hover {
+  background-color: var(--accent-secondary);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .match-card {
+    padding: 1rem;
+  }
+
+  .match-body {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .team {
+    width: 100%;
+  }
+
+  .match-divider {
+    padding: 0;
+  }
+
+  .team-score {
+    font-size: 1.5rem;
+  }
+}
